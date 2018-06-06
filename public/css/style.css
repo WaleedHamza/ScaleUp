@@ -1,0 +1,29 @@
+body {
+    /* background: linear-gradient(to bottom right, rgb(85, 120, 145), rgb(25, 65, 90))no-repeat center fixed; */
+    background-color: rgb(45, 45, 45)
+}
+
+#intro{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    margin-top: -80px;
+    margin-left: -90px;
+    width: 20%;
+    height: 20%;
+}
+h1{
+    position: relative;
+    font-family: 'Roboto Mono';
+    text-shadow: 4px 4px 4px black;
+    color: white;
+    width: 100%
+}
+#getStartedBtn{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    border-color: white;
+    border-radius: 5px;
+    background-color: white;
+}
