@@ -20,6 +20,14 @@ var routes = require("./controller/dataController.js");
 
 app.use(routes);
 
-app.listen(PORT, () => {
-    console.log('Server is listening on : http://localhost:'+ PORT);
-});
+require('./routes/api-routes')(app);
+require('./routes/html-routes')(app);
+
+db.sequelize.sync({ }).then(function() {
+    app.listen(PORT, function() {
+        console.log('Server is listening on : http://localhost:'+ PORT);
+    });
+  });
+
+
+

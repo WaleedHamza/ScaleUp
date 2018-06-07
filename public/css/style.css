@@ -2,6 +2,16 @@ body {
     /* background: linear-gradient(to bottom right, rgb(85, 120, 145), rgb(25, 65, 90))no-repeat center fixed; */
     background-color: rgb(45, 45, 45)
 }
+.nav-wrapper{
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(45 ,45 ,45)
+}
+
+.navLinks:hover{
+    border-bottom: 2px solid white;
+
+}
 
 #intro{
     position: absolute;
@@ -26,4 +36,20 @@ h1{
     border-color: white;
     border-radius: 5px;
     background-color: white;
+}
+
+/* Form Page */
+
+#inputField{
+    align-content: center;
+    padding: 10%;
+    padding-bottom: 2%;
+}
+
+/* Results */
+.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+
+.card-content{
+height: 400px;;
 }

@@ -13,20 +13,30 @@
 
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <script src="../models/data.js"></script>
     <title>ScaleUp</title>
 </head>
 <body>
     <header>
 
-        <div id="header" class="row"><h4>ScaleUp</h4>
-        <a href="#">Home</a>  <a href="#">About Us</a>  <a href="#">Connect</a>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ScaleUp</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="navLinks"><a href="index.html">Home</a></li>
+                    <li class="navLinks"><a href="results.html">results</a></li>
+                    <li class="navLinks"><a href="form.html">Form</a></li>
+              </ul>
+            </div>
+          </nav>
         
     </header>
     <div id="intro">
     <h1>ScaleUp</h1>
-    <a href="#"><button id="getStartedBtn">Get Started</button></a>
+    <a href="form.html"><button id="getStartedBtn">Get Started</button></a>
 </div>
+<script src="./js/front.js"></script>
 </body>
 </html>
