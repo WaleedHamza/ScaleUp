@@ -12,7 +12,7 @@ module.exports = (app) => {
         console.log(req.body)
         db.Data.create({
             /////database code here
-        }).then((dbData) =>{
+        }).then((dbData) => {
             res.json(dbData);
         })
     })

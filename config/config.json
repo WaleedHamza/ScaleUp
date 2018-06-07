@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "iScribe$2014",
+    "database": "scaleup_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "scaleup_db_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "scaleup_db_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

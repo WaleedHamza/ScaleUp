@@ -3,6 +3,9 @@ var bodyParser = require('body-parser');
 var PORT = process.env.PORT || 8080;
 var app = express();
 
+//added to definen db
+var db = require("./models");
+
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
