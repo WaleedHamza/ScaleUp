@@ -3,6 +3,9 @@ var bodyParser = require('body-parser');
 var PORT = process.env.PORT || 8080;
 var app = express();
 
+//added to definen db
+var db = require("./models");
+
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,9 +19,9 @@ app.use(bodyParser.json());
 // app.set('view engine', 'handlebars');
 
 
-var routes = require("./controller/dataController.js");
+var router = require("./controller/dataController.js");
 
-app.use(routes);
+app.use(router);
 
 require('./routes/api-routes')(app);
 require('./routes/html-routes')(app);

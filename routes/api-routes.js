@@ -11,11 +11,15 @@ module.exports = (app) => {
     app.post('/api/data', (req, res) => {
         console.log(req.body)
         db.Data.create({
-            /////database code here
-        }).then((dbData) =>{
+          //database code here
+          plant_zones: req.body.plantZone.text,
+          // not sure below is the proper syntax, text above works because
+          // it's the only field with type=text
+          capacity: req.body.capacity.text,
+          load_data: req.body.load.text,
+          percent_utilization: req.body.percent.text
+        }).then((dbData) => {
             res.json(dbData);
         })
     })
-
-
 }

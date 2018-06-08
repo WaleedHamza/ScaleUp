@@ -9,3 +9,5 @@ router.get('/', (req, res) => {
     console.log(req, res)
     res.render('form')
 });
+
+module.exports = router;

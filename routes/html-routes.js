@@ -1,16 +1,16 @@
 var path = require('path');
 
-module.exports = function (app){
+module.exports = function (app) {
 
-    app.get('/', (res, req) => {
+    app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 
-    app.get('/form', (res, req) => {
+    app.get('/form', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/form.html'));
     });
 
-    app.get('/results', (res, req) => {
+    app.get('/results', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/results.html'));
     });
 
