@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Data = sequelize.define("Data", {
+  var Data = sequelize.define("scale_data", {
     plant_zones: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,7 +27,9 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    }
+    },
+    // This is questionable for ignoring timestamps
+    // timestamps: false
   });
   return Data;
 };

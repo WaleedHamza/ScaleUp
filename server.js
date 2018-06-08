@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 // app.set('view engine', 'handlebars');
 
 
-var routes = require("./controller/dataController.js");
+var router = require("./controller/dataController.js");
 
-app.use(routes);
+app.use(router);
 
 require('./routes/api-routes')(app);
 require('./routes/html-routes')(app);
