@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Data = sequelize.define("scale_data", {
+  var Data = sequelize.define("Data", {
     plant_zones: {
       type: DataTypes.STRING,
       allowNull: false,

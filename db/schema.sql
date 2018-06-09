@@ -3,7 +3,7 @@ CREATE database scaleup_db;
 
 USE scaleup_db;
 
-CREATE TABLE scale_data (
+CREATE TABLE Data (
   id INTEGER AUTO_INCREMENT,
   plant_zones VARCHAR(30),
   capacity INTEGER,

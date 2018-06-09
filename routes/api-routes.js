@@ -1,4 +1,5 @@
 var db = require('../models');
+// var bodyParser = require('body-parser');
 
 module.exports = (app) => {
 
@@ -12,12 +13,12 @@ module.exports = (app) => {
         console.log(req.body)
         db.Data.create({
           //database code here
-          plant_zones: req.body.plantZone.text,
+          plant_zones: req.body.plant_zones,
           // not sure below is the proper syntax, text above works because
           // it's the only field with type=text
-          capacity: req.body.capacity.text,
-          load_data: req.body.load.text,
-          percent_utilization: req.body.percent.text
+          capacity: req.body.capacity,
+          load_data: req.body.load_data,
+          percent_utilization: req.body.percent_utilization
         }).then((dbData) => {
             res.json(dbData);
         })
