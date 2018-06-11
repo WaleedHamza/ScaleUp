@@ -1,82 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek">
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        <link rel="stylesheet" href="./css/style.css" type="text/css">
-        <script src="../models/data.js"></script>
-    <title>ScaleUp/Form</title>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <!-- <script src="../models/zones.js"></script> -->
+
+
+  <title>ScaleUp/Form</title>
 </head>
+
 <body>
-    <header>
+  <header>
 
-        <nav>
-            <div class="nav-wrapper">
-              <a href="index.html" class="brand-logo">ScaleUp</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li class="navLinks"><a href="index.html">Home</a></li>
-                    <li class="navLinks"><a href="results.html">results</a></li>
-                    <li class="navLinks"><a href="form.html">Form</a></li>
-              </ul>
-            </div>
-          </nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">ScaleUp</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="navLinks">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="navLinks">
+            <a href="results.html">results</a>
+          </li>
+          <li class="navLinks">
+            <a href="form.html">Form</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-        <!-- <div id="header" class="row"><h4>ScaleUp</h4>
+    <!-- <div id="header" class="row"><h4>ScaleUp</h4>
         <a href="#">Home</a>  <a href="#">About Us</a>  <a href="#">Connect</a>
         </div> -->
+
+  </header>
+
+
+  <div id="form" class="row">
+    <form class="col s12">
+      <div id="inputField" class="row">
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="buildingName" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Building Name</span>
+        </div>
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="plantZone" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Plant Zone</span>
+        </div>
+
         
-    </header>
+        
 
 
-    <div id="form" class="row">
-        <form class="col s12">
-          <div id="inputField" class="row">
 
-            <div class="input-field col offset-s1 s4">
-              <input  name="plantZone" type="text" class="validate"  style="color: white;">
-              <label for="name"  style="color: white;">Enter data...</label>
-              <span class="helper-text" data-error="wrong" data-success="right"  style="color: white;">Plant Zone</span>
-            </div>
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility1name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #1 Name</span>
+        </div>
 
-            <div class="input-field col s4 offset-s1">
-              <input  name="capacity" id=capacity type="number" class="validate"  style="color: white;">
-              <label for="name"  style="color: white;">Enter data...</label>
-              <span class="helper-text" data-error="wrong" data-success="right"  style="color: white;">Capacity</span>
-            </div>
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility1capacity" id=utility1capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #1 Capacity</span>
+        </div>
 
-            <div class="input-field col offset-s1 s4">
-              <input  name="load" id=load type="number" class="validate"  style="color: white;">
-              <label for="name"  style="color: white;">Enter data...</label>
-              <span class="helper-text" data-error="wrong" data-success="right"  style="color: white;">Current Load</span>
-            </div>
-      
-            <div class="input-field col s4 offset-s1">
-              <input  name="percent" id=percent type="number" class="validate"  style="color: white;">
-              <label for="name"  style="color: white;">Enter data...</label>
-              <span class="helper-text" data-error="wrong" data-success="right"  style="color: white;">Percent Utilization</span>
-            </div>
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility1load" id=utility1load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #1 Load</span>
+        </div>
 
-            <div>
-              <button type="submit" class="btn btn-success">Add Zone Data</button>
-            </div>
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility1percentutilization" id=utility1percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #1 Percent Utilization</span>
+        </div>
 
-          </div>
-        </form>
-        <div class="input-field col offset-s8 s2" >
-                <a href="results.html"><button id="getStartedBtn">Results</button></a>
-            </div>
+        
+        
+
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility2name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #2 Name</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility2capacity" id=utility2capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #2 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility2load" id=utility2load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #2 Load</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility2percentutilization" id=utility2percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #2 Percent Utilization</span>
+        </div>
+
+        
+        
+
+
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility3name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #3 Name</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility3capacity" id=utility3capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #3 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility3load" id=utility3load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #3 Load</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility3percentutilization" id=utility3percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #3 Percent Utilization</span>
+        </div>
+
+        
+        
+
+
+
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility4name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #4 Name</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility4capacity" id=utility4capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #4 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility4load" id=utility4load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #4 Load</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility4percentutilization" id=utility4percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #4 Percent Utilization</span>
+        </div>
+
+        
+        
+
+
+
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility5name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #5 Name</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility5capacity" id=utility5capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #5 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility5load" id=utility5load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #5 Load</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility5percentutilization" id=utility5percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #5 Percent Utilization</span>
+        </div>
+
+
+        
+        
+
+
+
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility6name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #6 Name</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility6capacity" id=utility6capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #6 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-4 col offset-s1 s4">
+          <input name="utility6load" id=utility1load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #6 Load</span>
+        </div>
+
+        <div class="input-field grey darken-4 col s4 offset-s1">
+          <input name="utility6percentutilization" id=utility6percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #6 Percent Utilization</span>
+        </div>
+
+
+        
+        
+
+
+
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility7name" type="text" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #7 Name</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility7capacity" id=utility7capacity type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #7 Capacity</span>
+        </div>
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="utility7load" id=utility7load type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #7 Load</span>
+        </div>
+
+        <div class="input-field grey darken-1 col s4 offset-s1">
+          <input name="utility7percentutilization" id=utility7percentutilization type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;">Enter data...</label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #7 Percent Utilization</span>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+          <button type="submit" class="btn btn-success">Add Zone Data</button>
+        </div>
+
       </div>
-      <script src="./js/front.js"></script>
+    </form>
+    <div class="col offset-s8 s2">
+      <a href="results.html">
+        <button id="getStartedBtn">Results</button>
+      </a>
+    </div>
+  </div>
+
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./js/front.js"></script>
 </body>
+
 </html>
