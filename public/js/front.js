@@ -153,10 +153,25 @@ $(document).ready(function(){
       ]
       console.log(utilityPercent);
 
+      utilityCapacity=[
+        data.Utilities["0"].capacity1,
+        data.Utilities["0"].capacity2,
+        data.Utilities["0"].capacity3,
+        data.Utilities["0"].capacity4,
+        data.Utilities["0"].capacity5,
+        data.Utilities["0"].capacity6,
+        data.Utilities["0"].capacity7
+      ]
+      console.log(utilityCapacity);
+
       var chart1data ={
         labels: utilityNames,
         datasets: [{
-          label: 'utility percent',
+          label: 'Capacity',
+          backgroundColor: 'blue',
+          data: utilityCapacity
+        },{
+          label: 'Percent Used',
           backgroundColor: 'red',
           data: utilityPercent
         }],
@@ -174,7 +189,7 @@ $(document).ready(function(){
         options:{
           title:{
             display: true,
-            text: 'This is ' + zoneNames[0] + ' ' + buildingNames[0] 
+            text: 'This is ' + buildingNames[0] + ' ' + zoneNames[0] 
           }},
       });
 
