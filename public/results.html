@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
         <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <link rel="stylesheet" href="./css/style.css" type="text/css">
@@ -41,7 +42,8 @@
                 <div class="card horizontal">
                   <div class="card-stacked">
                     <div class="card-content">
-                      <p>This where the results will show with pie/bar chart</p>
+                      <!--<p>This where the results will show with pie/bar chart</p>-->
+                      <canvas id=chartOne height="400" width="400"></canvas>
                     </div>
                   </div>
                 </div>
@@ -51,7 +53,8 @@
                 <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                    <p>This where the results will show with pie/bar chart</p>
+                      <!--<p>This where the results will show with pie/bar chart</p>-->
+                      <canvas id=chartTwo height="300" width="300"></canvas>
                     </div>
                 </div>
                 </div>
@@ -80,5 +83,7 @@
             </div>
 </div>
 <script src="./js/front.js"></script>
+
+
 </body>
 </html>
