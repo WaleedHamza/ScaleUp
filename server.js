@@ -4,11 +4,11 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 //added to definen db
-var db = require("./models");
+var db = require("./models/index.js");
 
 app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
@@ -26,11 +26,8 @@ app.use(router);
 require('./routes/api-routes')(app);
 require('./routes/html-routes')(app);
 
-db.sequelize.sync({ }).then(function() {
-    app.listen(PORT, function() {
-        console.log('Server is listening on : http://localhost:'+ PORT);
+db.sequelize.sync({}).then(function () {
+    app.listen(PORT, function () {
+        console.log('Server is listening on : http://localhost:' + PORT);
     });
-  });
-
-
-
+});

@@ -42,7 +42,7 @@ h1{
 
 #inputField{
     align-content: center;
-    padding: 10%;
+    padding: 0%;
     padding-bottom: 2%;
 }
 
@@ -51,5 +51,22 @@ h1{
 .grid-item--width2 { width: 50%; }
 
 .card-content{
-height: 400px;;
+height: 400px;
 }
+
+.break {
+    width: 100px;
+}
+
+  
+.input-field {
+    margin: 0px;
+    min-width: 100%;
+    padding: 200px;
+    padding: 30px !important;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }

@@ -11,18 +11,94 @@ $(document).ready(function () {
 
       function insertZone(event) {
         event.preventDefault();
+        
+        
+        //making inputs work...
         var zone = {
-          // example had one input field, so only one new ite. don't think this code is correct
+          // building name
+          buildingName: $("input[name='buildingName']").val().trim(),
+          // plant zones
           plant_zones: $("input[name='plantZone']").val().trim(),
-          capacity: $("input[name='capacity']").val().trim(),
-          load_data: $("input[name='load']").val().trim(),
-          percent_utilization: $("input[name='percent']").val().trim()
+          // utility 1
+          utility1name: $("input[name='utility1name']").val().trim(),
+          utility1capacity: $("input[name='utility1capacity']").val().trim(),
+          utility1load: $("input[name='utility1load']").val().trim(),
+          utility1percentutilization: $("input[name='utility1percentutilization']").val().trim(),
+          // utility 2
+          utility2name: $("input[name='utility2name']").val().trim(),
+          utility2capacity: $("input[name='utility2capacity']").val().trim(),
+          utility2load: $("input[name='utility2load']").val().trim(),
+          utility2percentutilization: $("input[name='utility2percentutilization']").val().trim(),
+          // utility 3
+          utility3name: $("input[name='utility3name']").val().trim(),
+          utility3capacity: $("input[name='utility3capacity']").val().trim(),
+          utility3load: $("input[name='utility3load']").val().trim(),
+          utility3percentutilization: $("input[name='utility3percentutilization']").val().trim(),
+          // utility 4
+          utility4name: $("input[name='utility4name']").val().trim(),
+          utility4capacity: $("input[name='utility4capacity']").val().trim(),
+          utility4load: $("input[name='utility4load']").val().trim(),
+          utility4percentutilization: $("input[name='utility4percentutilization']").val().trim(),
+          // utility 5
+          utility5name: $("input[name='utility5name']").val().trim(),
+          utility5capacity: $("input[name='utility5capacity']").val().trim(),
+          utility5load: $("input[name='utility5load']").val().trim(),
+          utility5percentutilization: $("input[name='utility5percentutilization']").val().trim(),
+          // utility 6
+          utility6name: $("input[name='utility6name']").val().trim(),
+          utility6capacity: $("input[name='utility6capacity']").val().trim(),
+          utility6load: $("input[name='utility6load']").val().trim(),
+          utility6percentutilization: $("input[name='utility6percentutilization']").val().trim(),
+          // utility 7
+          utility7name: $("input[name='utility7name']").val().trim(),
+          utility7capacity: $("input[name='utility7capacity']").val().trim(),
+          utility7load: $("input[name='utility7load']").val().trim(),
+          utility7percentutilization: $("input[name='utility7percentutilization']").val().trim(),
         }
 
+        $("input[name='buildingName']").val("");
         $("input[name='plantZone']").val("");
-        $("input[name='capacity']").val("");
-        $("input[name='load']").val("");
-        $("input[name='percent']").val("");
+        // utility 1
+        $("input[name='utility1name']").val("");
+        $("input[name='utility1capacity']").val("");
+        $("input[name='utility1load']").val("");
+        $("input[name='utility1percentutilization']").val("");
+
+        // utility 2
+        $("input[name='utility2name']").val("");
+        $("input[name='utility2capacity']").val("");
+        $("input[name='utility2load']").val("");
+        $("input[name='utility2percentutilization']").val("");
+
+        // utility 3
+        $("input[name='utility3name']").val("");
+        $("input[name='utility3capacity']").val("");
+        $("input[name='utility3load']").val("");
+        $("input[name='utility3percentutilization']").val("");
+
+        // utility 4
+        $("input[name='utility4name']").val("");
+        $("input[name='utility4capacity']").val("");
+        $("input[name='utility4load']").val("");
+        $("input[name='utility4percentutilization']").val("");
+
+        // utility 5
+        $("input[name='utility5name']").val("");
+        $("input[name='utility5capacity']").val("");
+        $("input[name='utility5load']").val("");
+        $("input[name='utility5percentutilization']").val("");
+
+        // utility 6
+        $("input[name='utility6name']").val("");
+        $("input[name='utility6capacity']").val("");
+        $("input[name='utility6load']").val("");
+        $("input[name='utility6percentutilization']").val("");
+
+        // utility 7
+        $("input[name='utility7name']").val("");
+        $("input[name='utility7capacity']").val("");
+        $("input[name='utility7load']").val("");
+        $("input[name='utility7percentutilization']").val("");
 
         $.post("/api/data", zone).done(function (data) {
           console.log(data);

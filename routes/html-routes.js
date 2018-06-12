@@ -14,8 +14,4 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, '../public/results.html'));
     });
 
-    // need this to get data from form to post... 
-    // app.post('/form', (req, res) => {
-    // }
-
 }
