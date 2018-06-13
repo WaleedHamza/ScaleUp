@@ -9,6 +9,11 @@ $(document).ready(function () {
 
       $(document).on("submit", "#form", insertZone);
 
+      //Materialize Select 
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+
       function insertZone(event) {
         event.preventDefault();
         

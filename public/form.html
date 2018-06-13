@@ -47,21 +47,67 @@
   <div id="form" class="row">
     <form class="col s12">
       <div id="inputField" class="row">
+          <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected></option>
+                <option value="1" style="color: white">Building 1</option>
+                <option value="2" style="color: white">Building 2</option>
+                <option value="3" style="color: white">Building 3</option>
+              </select>
+              <label style="color: white"><h5>Select Building</h5></label>
+            </div>
 
-        <div class="input-field grey darken-4 col offset-s1 s4">
-          <input name="buildingName" type="text" class="validate" style="color: white;">
-          <label for="name" style="color: white;">Enter data...</label>
-          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Building Name</span>
-        </div>
+            <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected></option>
+                  <option value="1">Zone 1</option>
+                  <option value="2">Zone 2</option>
+                  <option value="3">Zone 3</option>
+                </select>
+                <label style="color: white"><h5>Select Zone</h5></label>
+              </div>
+                      
 
-        <div class="input-field grey darken-4 col offset-s1 s4">
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input name="buildingName" type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;"><h6>ELECTRICITY</h6></label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+          <br>
           <input name="plantZone" type="text" class="validate" style="color: white;">
-          <label for="name" style="color: white;">Enter data...</label>
-          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Plant Zone</span>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Load</span>
         </div>
 
+        <div class="input-field grey darken-2 col offset-s1 s4">
+            <input name="buildingName" type="number" class="validate" style="color: white;">
+            <label for="name" style="color: white;"><h6>WATER</h6></label>
+            <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+            <br>
+            <input name="plantZone" type="text" class="validate" style="color: white;">
+            <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Load</span>
+          </div>
+
+          <div class="input-field grey darken-3 col offset-s1 s4">
+              <input name="buildingName" type="number" class="validate" style="color: white;">
+              <label for="name" style="color: white;"><h6>HVAC</h6></label>
+              <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+              <br>
+              <input name="plantZone" type="text" class="validate" style="color: white;">
+              <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Load</span>
+            </div>
+
+            <div class="input-field grey darken-4 col offset-s1 s4">
+                <input name="buildingName" type="number" class="validate" style="color: white;">
+                <label for="name" style="color: white;"><h6>XTRA</h6></label>
+                <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+                <br>
+                <input name="plantZone" type="text" class="validate" style="color: white;">
+                <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Load</span>
+              </div>
+
+        
 
 
+<!-- 
         <div class="input-field grey darken-1 col offset-s1 s4">
           <input name="utility1name" type="text" class="validate" style="color: white;">
           <label for="name" style="color: white;">Enter data...</label>
@@ -240,24 +286,33 @@
           <input name="utility7percentutilization" id=utility7percentutilization type="number" class="validate" style="color: white;">
           <label for="name" style="color: white;">Enter data...</label>
           <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Utility #7 Percent Utilization</span>
-        </div>
+        </div> -->
 
 
-
-        <div>
-          <button type="submit" class="btn btn-success">Add Zone Data</button>
-        </div>
-
-      </div>
     </form>
-    <div class="col offset-s8 s2">
-      <a href="results.html">
-        <button id="getStartedBtn">Results</button>
-      </a>
+    <br>
     </div>
+    <div class="col s12">
+
+      <ul class="row">
+        <li class="col s6">
+            <button id="addDataBtn" type="submit" class="btn btn-success">Add Zone Data</button>
+        </li>
+        <li class="col s6">
+          <a href="results.html">
+              <button id="resultsBtn" class="btn btn-success">Results</button>
+          </a>
+                
+        </li>
+      </ul>
+            
+
+          
+  
+        </div>
   </div>
 
-  <footer class="page-footer">
+  <footer class="page-footer" style="background-color: rgb(45, 45, 45)">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
