@@ -5,6 +5,13 @@ module.exports = function(sequelize, DataTypes) {
 
 
   var Utilities = sequelize.define("Utilities", {
+    zone_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'zones',
+        key: 'id',
+      }
+    },
     // utility 1
     utility1name: {
       type: DataTypes.STRING,

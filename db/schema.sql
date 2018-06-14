@@ -15,7 +15,9 @@ CREATE TABLE Zones (
  plant_zones VARCHAR(30),
  PRIMARY KEY(id),
  INDEX pat_ind (building_id),
- foreign key (building_id) references Buildings(id)
+ FOREIGN KEY (building_id) REFERENCES Buildings(id)
+ ON DELETE CASCADE
+ ON UPDATE CASCADE
 );
 
 CREATE TABLE Utilities (
@@ -39,5 +41,7 @@ CREATE TABLE Utilities (
  percent_utilizations4 INT,
  PRIMARY KEY(id),
  INDEX par_ind (zone_id),
- foreign key (zone_id) references Zones(id)
+ FOREIGN KEY (zone_id) REFERENCES Zones(id)
+ ON DELETE CASCADE
+ ON UPDATE CASCADE
 );

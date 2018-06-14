@@ -44,28 +44,39 @@ module.exports = (app) => {
                     building_id: building.id
                 }).then(zone => {
                     Data.zone = zone;
+                    const {
+                        utility1load,
+                        utility1capacity,
+                        utility2load,
+                        utility2capacity,
+                        utility3load,
+                        utility3capacity,
+                        utility4load,
+                        utility4capacity
+                    } = req.body;
+
                     db.Utilities.create({
                         zone_id: zone.id,
                         // utility1
                         utility1name: 'Electricity',
-                        capacity1: req.body.utility1capacity,
-                        used1: req.body.utility1load,
-                        percent_utilizations1: '0',
+                        capacity1: utility1capacity,
+                        used1: utility1load,
+                        percent_utilizations1: utility1capacity/utility1load * 100,
                         // utility 2
                         utility2name: 'Water',
-                        capacity2: req.body.utility2capacity,
-                        used2: req.body.utility2load,
-                        percent_utilizations2: '0',
+                        capacity2: utility2capacity,
+                        used2: utility2load,
+                        percent_utilizations2: utility2capacity/utility2load * 100,
                         // utility 3
                         utility3name: 'HVAC',
-                        capacity3: req.body.utility3capacity,
-                        used3: req.body.utility3load,
-                        percent_utilizations3: '0',
+                        capacity3: utility3capacity,
+                        used3: utility3load,
+                        percent_utilizations3: utility3capacity/utility3load * 100,
                         // utility 4
                         utility4name: 'Steam',
-                        capacity4: req.body.utility4capacity,
-                        used4: req.body.utility4load,
-                        percent_utilizations4: '0',
+                        capacity4: utility4capacity,
+                        used4: utility4load,
+                        percent_utilizations4: utility4capacity/utility4load * 100,
                        
                     }).then(utilities => {
                         Data.utilities = utilities;
