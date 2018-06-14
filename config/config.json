@@ -1,7 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "iScribe$2014",
+    "password": null,
+
     "database": "scaleup_db",
     "host": "localhost",
     "dialect": "mysql"

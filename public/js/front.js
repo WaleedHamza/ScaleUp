@@ -162,60 +162,62 @@ $(document).ready(function(){
 
 
 
-// const chartOne = document.getElementById('chartOne');
-// // console.log(chartOne);
 
-// Chart.defaults.global.defaultFontFamily = 'lato';
-// Chart.defaults.global.defaultFontSize = 18;
-// Chart.defaults.global.defaultFontColor = '#777';
+const chartOne = document.getElementById('chartOne');
+// console.log(chartOne);
 
-// let barChartOne = new Chart(chartOne, {
-//   type: 'bar',
-//   data: {
-//     labels: ['label1', 'label2', 'label3'],
-//     datasets: [{
-//       label: "test chart",
-//       // Actual data goes below, this will be pulled from mySQL
-//       data:[12,20,5],
-//       backgroundColor: ['blue','red','green']
-//     }]
-//   },
-//   options:{
-//     title:{
-//       display: true,
-//       text: 'This is the name of the chart'
-//     },
-//     tooltips:{
-//       // popups when you hover over chart
-//       enabled:true
-//     }
-//   }
-// });
+Chart.defaults.global.defaultFontFamily = 'lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
 
-// const chartTwo = document.getElementById('chartTwo');
-// // console.log(chartTwo);
+let barChartOne = new Chart(chartOne, {
+  type: 'bar',
+  data: {
+    labels: ['label1', 'label2', 'label3'],
+    datasets: [{
+      label: "test chart",
+      // Actual data goes below, this will be pulled from mySQL
+      data:[12,20,5],
+      backgroundColor: ['blue','red','green']
+    }]
+  },
+  options:{
+    title:{
+      display: true,
+      text: 'This is the name of the chart'
+    },
+    tooltips:{
+      // popups when you hover over chart
+      enabled:true
+    }
+  }
+});
 
-// let barChartTwo = new Chart(chartTwo, {
-//   type: 'bar',
-//   data: {
-//     labels: ['label1', 'label2', 'label3'],
-//     datasets: [{
-//       label: "test chart",
-//       // Actual data goes below, this will be pulled from mySQL
-//       data:[12,20,5],
-//       backgroundColor: ['blue','red','green']
-//     }]
-//   },
-//   options:{
-//     title:{
-//       display: true,
-//       text: 'This is the name of the chart'
-//     },
-//     tooltips:{
-//       // popups when you hover over chart
-//       enabled:true
-//     }
-//   }
-// });
+const chartTwo = document.getElementById('chartTwo');
+// console.log(chartTwo);
 
-// console.log(app);
+let barChartTwo = new Chart(chartTwo, {
+  type: 'bar',
+  data: {
+    labels: ['label1', 'label2', 'label3'],
+    datasets: [{
+      label: "test chart",
+      // Actual data goes below, this will be pulled from mySQL
+      data:[12,20,5],
+      backgroundColor: ['blue','red','green']
+    }]
+  },
+  options:{
+    title:{
+      display: true,
+      text: 'This is the name of the chart'
+    },
+    tooltips:{
+      // popups when you hover over chart
+      enabled:true
+    }
+  }
+});
+
+console.log(app);
+
