@@ -14,7 +14,9 @@ module.exports = function(sequelize, DataTypes) {
         is: ["[A-Za-z0-9\s_]+"],
       }
     },
-  });
+  }, {
+    timestamps: false
+});
 
   // associates buildings to zones
   Zones.belongsTo(buildingsModel);

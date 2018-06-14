@@ -1,6 +1,6 @@
 body {
-    /* background: linear-gradient(to bottom right, rgb(85, 120, 145), rgb(25, 65, 90))no-repeat center fixed; */
-    background-color: rgb(45, 45, 45)
+    background: linear-gradient(to bottom right, rgb(85, 120, 145), rgb(25, 65, 90))no-repeat center fixed;
+    /* background-color: rgb(50, 50, 50) */
 }
 .nav-wrapper{
     padding-left: 10%;
@@ -45,6 +45,20 @@ h1{
     padding: 0%;
     padding-bottom: 2%;
 }
+#form {
+    display: grid;
+    padding: 10%;
+    margin: 0 auto;
+    grid-template-columns: 80%;
+}
+
+#addDataBtn, #resultsBtn {
+    background-color: rgb(139, 139, 139);
+    color: white;
+    box-shadow: -5px 5px 5px black;
+}
+
+
 
 /* Results */
 .grid-item { width: 25%; }

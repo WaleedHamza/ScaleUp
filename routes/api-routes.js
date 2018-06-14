@@ -41,46 +41,32 @@ module.exports = (app) => {
                 Data.building = building;
                 db.Zones.create({
                     plant_zones: req.body.plant_zones,
-                    BuildingId: building.id,
+                    building_id: building.id
                 }).then(zone => {
                     Data.zone = zone;
                     db.Utilities.create({
-                        ZoneId: zone.id,
+                        zone_id: zone.id,
                         // utility1
-                        utility1name: req.body.utility1name,
+                        utility1name: 'Electricity',
                         capacity1: req.body.utility1capacity,
-                        load1: req.body.utility1load,
-                        percent_utilization1: req.body.utility1percentutilization,
+                        used1: req.body.utility1load,
+                        percent_utilizations1: '0',
                         // utility 2
-                        utility2name: req.body.utility2name,
+                        utility2name: 'Water',
                         capacity2: req.body.utility2capacity,
-                        load2: req.body.utility2load,
-                        percent_utilization2: req.body.utility2percentutilization,
+                        used2: req.body.utility2load,
+                        percent_utilizations2: '0',
                         // utility 3
-                        utility3name: req.body.utility3name,
+                        utility3name: 'HVAC',
                         capacity3: req.body.utility3capacity,
-                        load3: req.body.utility3load,
-                        percent_utilization3: req.body.utility3percentutilization,
+                        used3: req.body.utility3load,
+                        percent_utilizations3: '0',
                         // utility 4
-                        utility4name: req.body.utility4name,
+                        utility4name: 'Steam',
                         capacity4: req.body.utility4capacity,
-                        load4: req.body.utility4load,
-                        percent_utilization4: req.body.utility4percentutilization,
-                        // utility 5
-                        utility5name: req.body.utility5name,
-                        capacity5: req.body.utility5capacity,
-                        load5: req.body.utility5load,
-                        percent_utilization5: req.body.utility5percentutilization,
-                        // utility 6
-                        utility6name: req.body.utility6name,
-                        capacity6: req.body.utility6capacity,
-                        load6: req.body.utility6load,
-                        percent_utilization6: req.body.utility6percentutilization,
-                        // utility 7
-                        utility7name: req.body.utility7name,
-                        capacity7: req.body.utility7capacity,
-                        load7: req.body.utility7load,
-                        percent_utilization7: req.body.utility7percentutilization
+                        used4: req.body.utility4load,
+                        percent_utilizations4: '0',
+                       
                     }).then(utilities => {
                         Data.utilities = utilities;
                         res.json(Data);
