@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -45,7 +45,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,3],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -67,7 +67,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -76,7 +76,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -85,7 +85,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,3],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -108,7 +108,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -117,7 +117,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -126,7 +126,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,3],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -149,7 +149,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -158,7 +158,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,8],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }
@@ -168,7 +168,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,3],
+        len: [1,1000],
         isInt: true,
         notEmpty: true,
       }

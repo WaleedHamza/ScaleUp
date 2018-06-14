@@ -61,22 +61,22 @@ module.exports = (app) => {
                         utility1name: 'Electricity',
                         capacity1: utility1capacity,
                         used1: utility1load,
-                        percent_utilizations1: utility1capacity/utility1load * 100,
+                        percent_utilizations1: parseInt(utility1load/utility1capacity * 100),
                         // utility 2
                         utility2name: 'Water',
                         capacity2: utility2capacity,
                         used2: utility2load,
-                        percent_utilizations2: utility2capacity/utility2load * 100,
+                        percent_utilizations2: parseInt(utility2load/utility2capacity * 100),
                         // utility 3
                         utility3name: 'HVAC',
                         capacity3: utility3capacity,
                         used3: utility3load,
-                        percent_utilizations3: utility3capacity/utility3load * 100,
+                        percent_utilizations3: parseInt(utility3load/utility3capacity * 100),
                         // utility 4
                         utility4name: 'Steam',
                         capacity4: utility4capacity,
                         used4: utility4load,
-                        percent_utilizations4: utility4capacity/utility4load * 100,
+                        percent_utilizations4: parseInt(utility4load/utility4capacity * 100),
                        
                     }).then(utilities => {
                         Data.utilities = utilities;

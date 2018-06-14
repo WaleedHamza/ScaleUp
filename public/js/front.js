@@ -31,14 +31,14 @@ $(document).ready(function () {
           utility1capacity: $("#electricCap").val().trim(),
           utility1load: $("#electricUsed").val().trim(),
           // Water
-          utility2capacity: $("#waterUsed").val().trim(),
-          utility2load: $("#waterCap").val().trim(),
+          utility2capacity: $("#waterCap").val().trim(),
+          utility2load: $("#waterUsed").val().trim(),
           //HVAC
-          utility3capacity: $("#hvacUsed").val().trim(),
-          utility3load: $("#hvacCap").val().trim(),
+          utility3capacity: $("#hvacCap").val().trim(),
+          utility3load: $("#hvacUsed").val().trim(),
           // Steam
-          utility4capacity: $("#steamUsed").val().trim(),
-          utility4load: $("#steamCap").val().trim(),
+          utility4capacity: $("#steamCap").val().trim(),
+          utility4load: $("#steamUsed").val().trim(),
          }
 
          console.log( 'this is the zone var front.js',  zone);
@@ -162,6 +162,7 @@ $(document).ready(function(){
 
 
 
+
 const chartOne = document.getElementById('chartOne');
 // console.log(chartOne);
 
@@ -219,3 +220,4 @@ let barChartTwo = new Chart(chartTwo, {
 });
 
 console.log(app);
+

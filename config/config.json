@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
+
     "database": "scaleup_db",
     "host": "localhost",
     "dialect": "mysql"
