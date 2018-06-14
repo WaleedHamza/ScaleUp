@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    load1: {
+    used1: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -32,8 +32,9 @@ module.exports = function(sequelize, DataTypes) {
         isInt: true,
         notEmpty: true,
       }
-    },
-    percent_utilization1: {
+    }
+    ,
+    percent_utilizations1: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -64,7 +65,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    load2: {
+    used2: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -73,7 +74,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    percent_utilization2: {
+    percent_utilizations2: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -105,7 +106,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    load3: {
+    used3: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -114,7 +115,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    percent_utilization3: {
+    percent_utilizations3: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -146,7 +147,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-    load4: {
+    used4: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -154,8 +155,9 @@ module.exports = function(sequelize, DataTypes) {
         isInt: true,
         notEmpty: true,
       }
-    },
-    percent_utilization4: {
+    }
+    ,
+    percent_utilizations4: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -163,139 +165,11 @@ module.exports = function(sequelize, DataTypes) {
         isInt: true,
         notEmpty: true,
       }
-    },
+    }
 
 
-
-
-    utility5name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1,25],
-        notEmpty: true,
-        is: ["[A-Za-z0-9\s_]+"],
-      }
-    },
-    capacity5: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    load5: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    percent_utilization5: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,3],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-
-
-
-
-
-    utility6name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1,25],
-        notEmpty: true,
-        is: ["[A-Za-z0-9\s_]+"],
-      }
-    },
-    capacity6: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    load6: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    percent_utilization6: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,3],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-
-
-
-    utility7name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1,25],
-        notEmpty: true,
-        is: ["[A-Za-z0-9\s_]+"],
-      }
-    },
-    capacity7: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    load7: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,8],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-    percent_utilization7: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1,3],
-        isInt: true,
-        notEmpty: true,
-      }
-    },
-
-
-
-
-
-
-
-
-
-
-
-
+  }, {
+      timestamps: false
   });
 
   // associates zones to utilities
