@@ -66,6 +66,9 @@ h1{
 
 .card-content{
 height: 400px;
+width: 400px;
+background-color: darkgray;
+color: white;
 }
 
 .break {
