@@ -13,20 +13,31 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
         is: ["[A-Za-z0-9\s_]+"],
       }
-    },
-    building_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'buildings',
-        key: 'id',
-      }
     }
+    // ,
+    // building_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'buildings',
+    //     key: 'id',
+    //   }
+    // }
   }, {
     timestamps: false
 });
 
   // associates buildings to zones
-  Zones.belongsTo(buildingsModel);
+  // Zones.belongsTo(buildingsModel);
+
+  Zones.associate = function(models) {
+    // We're saying that a Post should belong to an Author
+    // A Post can't be created without an Author due to the foreign key constraint
+    Zones.belongsTo(models.Buildings, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Zones;
 };
