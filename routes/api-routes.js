@@ -41,7 +41,7 @@ module.exports = (app) => {
                 Data.building = building;
                 db.Zones.create({
                     plant_zones: req.body.plant_zones,
-                    building_id: building.id
+                    BuildingId: building.id
                 }).then(zone => {
                     Data.zone = zone;
                     const {
@@ -56,7 +56,7 @@ module.exports = (app) => {
                     } = req.body;
 
                     db.Utilities.create({
-                        zone_id: zone.id,
+                        ZoneId: zone.id,
                         // utility1
                         utility1name: 'Electricity',
                         capacity1: utility1capacity,

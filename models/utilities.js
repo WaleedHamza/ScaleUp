@@ -5,13 +5,14 @@ module.exports = function(sequelize, DataTypes) {
 
 
   var Utilities = sequelize.define("Utilities", {
-    zone_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'zones',
-        key: 'id',
-      }
-    },
+    // zone_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'zones',
+    //     key: 'id',
+    //   }
+    // }
+    // ,
     // utility 1
     utility1name: {
       type: DataTypes.STRING,
@@ -179,8 +180,17 @@ module.exports = function(sequelize, DataTypes) {
       timestamps: false
   });
 
-  // associates zones to utilities
-  Utilities.belongsTo(zoneModels);
+  // // associates zones to utilities
+  // Utilities.belongsTo(zoneModels);
+  Utilities.associate = function(models) {
+    // We're saying that a Post should belong to an Author
+    // A Post can't be created without an Author due to the foreign key constraint
+    Utilities.belongsTo(models.Zones, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Utilities;
 };
