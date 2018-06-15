@@ -10,6 +10,7 @@ $(document).ready(function () {
       $(document).on("submit", "#form", insertZone);
       $('#addDataBtn').on('click', ()=>{
         insertZone();
+        location.reload();
         console.log(' i have been clicked', zone)
       });
   
