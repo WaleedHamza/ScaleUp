@@ -4,9 +4,9 @@
 // Could be broken into a different js file, maybe app.js
 $(document).ready(function(){
   $.ajax({
-    url: "'window.location.hostname'+'/api/data'",
-    // url: "http://localhost:8080/api/data",
+    url: "https://scale-up2018.herokuapp.com/api/data",
     method: "GET",
+    dataType: 'json',
     success: function(data){
       console.log(data);
       var buildingNames = [];
@@ -15,7 +15,7 @@ $(document).ready(function(){
 
       for(var i in data.Buildings) {
         buildingNames.push(data.Buildings[i].building_name);
-        zoneNames.push(data.Zones[i].plant_zones,"Test");
+        zoneNames.push(data.Zones[i].plant_zones);
         // multiple utilities in single row, how are we looking to chart this data?
         // utilityNames.push(data[i].utility1name);
       }
@@ -34,30 +34,20 @@ $(document).ready(function(){
       console.log(utilityNames);
 
       utilityPercent=[
-        data.Utilities["0"].percent_utilization1,
-        data.Utilities["0"].percent_utilization2,
-        data.Utilities["0"].percent_utilization3,
-        data.Utilities["0"].percent_utilization4
+        data.Utilities["0"].percent_utilizations1,
+        data.Utilities["0"].percent_utilizations2,
+        data.Utilities["0"].percent_utilizations3,
+        data.Utilities["0"].percent_utilizations4
       ]
       console.log(utilityPercent);
 
-      utilityCapacity=[
-        data.Utilities["0"].capacity1,
-        data.Utilities["0"].capacity2,
-        data.Utilities["0"].capacity3,
-        data.Utilities["0"].capacity4
-      ]
-      console.log(utilityCapacity);
+
 
       var chart1data ={
         labels: utilityNames,
         datasets: [{
-          label: 'Capacity',
-          backgroundColor: 'blue',
-          data: utilityCapacity
-        },{
-          label: 'Percent Used',
-          backgroundColor: 'red',
+          label: 'Percent Used first row',
+          backgroundColor: 'rgba(60, 80, 235, 0.8)',
           data: utilityPercent
         }],
       };
@@ -65,18 +55,78 @@ $(document).ready(function(){
       // Actual chart creation
       const chartOne = document.getElementById('chartOne');
       Chart.defaults.global.defaultFontFamily = 'lato';
-      Chart.defaults.global.defaultFontSize = 18;
-      Chart.defaults.global.defaultFontColor = '#777';
+      Chart.defaults.global.defaultFontSize = 17;
+      Chart.defaults.global.defaultFontColor = 'black';
       
       var barChartOne = new Chart(chartOne, {
         type: 'bar',
         data: chart1data,
         options:{
+          scales:{
+            yAxes:[{
+              ticks:{
+                suggestedMin:0,
+                suggestedMax: 100
+              }
+            }]
+          },
           title:{
             display: true,
             text: 'This is ' + buildingNames[0] + ' ' + zoneNames[0] 
           }},
       });
+
+
+
+// chart 2
+utilityNames=[
+  data.Utilities["1"].utility1name,
+  data.Utilities["1"].utility2name,
+  data.Utilities["1"].utility3name,
+  data.Utilities["1"].utility4name
+]
+//console.log(utilityNames);
+
+utilityPercent=[
+  data.Utilities["1"].percent_utilizations1,
+  data.Utilities["1"].percent_utilizations2,
+  data.Utilities["1"].percent_utilizations3,
+  data.Utilities["1"].percent_utilizations4
+]
+//console.log(utilityPercent);
+
+
+
+var chart2data ={
+  labels: utilityNames,
+  datasets: [{
+    label: 'Percent Used second row',
+    backgroundColor: 'rgba(60, 100, 200, 0.8)',
+    data: utilityPercent
+  }],
+};
+
+// Actual chart creation
+const chartTwo = document.getElementById('chartTwo');
+
+var barChartTwo = new Chart(chartTwo, {
+  type: 'bar',
+  data: chart2data,
+  options:{
+    scales:{
+      yAxes:[{
+        ticks:{
+          suggestedMin:0,
+          suggestedMax: 100
+        }
+      }]
+    },
+    title:{
+      display: true,
+      text: 'This is ' + buildingNames[1] + ' ' + zoneNames[1] 
+    }},
+});
+
 
     },
     error: function(data) {
@@ -86,61 +136,3 @@ $(document).ready(function(){
   })
 })
 
-
-
-
-const chartOne = document.getElementById('chartOne');
-// console.log(chartOne);
-
-Chart.defaults.global.defaultFontFamily = 'lato';
-Chart.defaults.global.defaultFontSize = 18;
-Chart.defaults.global.defaultFontColor = '#777';
-
-let barChartOne = new Chart(chartOne, {
-  type: 'bar',
-  data: {
-    labels: ['label1', 'label2', 'label3'],
-    datasets: [{
-      label: "test chart",
-      // Actual data goes below, this will be pulled from mySQL
-      data:[12,20,5],
-      backgroundColor: ['blue','red','green']
-    }]
-  },
-  options:{
-    title:{
-      display: true,
-      text: 'This is the name of the chart'
-    },
-    tooltips:{
-      // popups when you hover over chart
-      enabled:true
-    }
-  }
-});
-
-const chartTwo = document.getElementById('chartTwo');
-// console.log(chartTwo);
-
-let barChartTwo = new Chart(chartTwo, {
-  type: 'bar',
-  data: {
-    labels: ['label1', 'label2', 'label3'],
-    datasets: [{
-      label: "test chart",
-      // Actual data goes below, this will be pulled from mySQL
-      data:[12,20,5],
-      backgroundColor: ['blue','red','green']
-    }]
-  },
-  options:{
-    title:{
-      display: true,
-      text: 'This is the name of the chart'
-    },
-    tooltips:{
-      // popups when you hover over chart
-      enabled:true
-    }
-  }
-});

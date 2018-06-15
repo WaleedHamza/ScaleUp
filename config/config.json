@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "scaleup_db",
-    "host": "localhost",
+    "username": "bb094217126fdb",
+    "password": "e584964a",
+    "database": "heroku_3d626cb8c7123fa",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "scaleup_db_test",
-    "host": "127.0.0.1",
+    "username": "bb094217126fdb",
+    "password": "e584964a",
+    "database": "heroku_3d626cb8c7123fa",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "scaleup_db_production",
-    "host": "127.0.0.1",
+    "username": "bb094217126fdb",
+    "password": "e584964a",
+    "database": "heroku_3d626cb8c7123fa",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   }
 }
