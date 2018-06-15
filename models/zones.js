@@ -26,18 +26,19 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: false
 });
 
-  // associates buildings to zones
+
+Zones.associate = function(models) {
+  // We're saying that a Building should belong to a Zone
+  Zones.belongsTo(models.Buildings, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
+
+  // // associates buildings to zones
   // Zones.belongsTo(buildingsModel);
 
-  Zones.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    Zones.belongsTo(models.Buildings, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
 
   return Zones;
 };

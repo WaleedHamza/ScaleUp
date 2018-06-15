@@ -11,18 +11,18 @@ CREATE TABLE Buildings (
 
 CREATE TABLE Zones (
  id INTEGER AUTO_INCREMENT,
- building_id INTEGER,
+ BuildingId INTEGER,
  plant_zones VARCHAR(30),
  PRIMARY KEY(id),
  INDEX pat_ind (building_id),
- FOREIGN KEY (building_id) REFERENCES Buildings(id)
- ON DELETE CASCADE
+ FOREIGN KEY (building_id) REFERENCES Buildings(id),
+ ON DELETE CASCADE,
  ON UPDATE CASCADE
 );
 
 CREATE TABLE Utilities (
  id INTEGER AUTO_INCREMENT,
- zone_id INTEGER,
+ ZoneId INTEGER,
  utility1name VARCHAR(30),
  capacity1 INTEGER,
  used1 INTEGER,
@@ -41,7 +41,7 @@ CREATE TABLE Utilities (
  percent_utilizations4 INT,
  PRIMARY KEY(id),
  INDEX par_ind (zone_id),
- FOREIGN KEY (zone_id) REFERENCES Zones(id)
- ON DELETE CASCADE
+ FOREIGN KEY (zone_id) REFERENCES Zones(id),
+ ON DELETE CASCADE,
  ON UPDATE CASCADE
 );
