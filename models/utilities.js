@@ -180,17 +180,21 @@ module.exports = function(sequelize, DataTypes) {
       timestamps: false
   });
 
-  // // associates zones to utilities
-  // Utilities.belongsTo(zoneModels);
+
+
   Utilities.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
+    // We're saying that a Utility should belong to a Zone
+    // A Utility can't be created without a Zone due to the foreign key constraint
     Utilities.belongsTo(models.Zones, {
       foreignKey: {
         allowNull: false
       }
     });
   };
+
+  // // associates zones to utilities
+  // Utilities.belongsTo(zoneModels);
+
 
   return Utilities;
 };
