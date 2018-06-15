@@ -1,30 +1,15 @@
 // from view.js example in classwork 8 squelize CRUD  
 $(document).ready(function () {
-      //Materialize Select 
-      // $('select').material_select();
       $('select').formSelect();
-
       $('.grid').isotope({
         // options
         itemSelector: '.grid-item',
         layoutMode: 'fitRows'
       });
 
-
-      // $(document).on("submit", "#form", insertZone);
-      // $('#addDataBtn').on('click', ()=>{
-      //   insertZone();
-      //   console.log(' i have been clicked', zone)
-      // });
-
-
-
       $('#addDataBtn').on('click', function () {
         insertZone();
         console.log(' i have been clicked', zone);
-        // $("#building option:first").prop('disabled', true);
-        // $("#building option:first").attr('selected', true);
-        // $('select').material_select();
         location.reload();
       });
 
