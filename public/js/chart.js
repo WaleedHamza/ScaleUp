@@ -26,26 +26,26 @@ $(document).ready(function(){
       // These arrays are being generated but not used, will become Chart labels
       
       utilityNames=[
-        data.Utilities["0"].utility1name,
-        data.Utilities["0"].utility2name,
-        data.Utilities["0"].utility3name,
-        data.Utilities["0"].utility4name
+        data.Utilities[0].utility1name,
+        data.Utilities[0].utility2name,
+        data.Utilities[0].utility3name,
+        data.Utilities[0].utility4name
       ]
       console.log(utilityNames);
 
       utilityPercent=[
-        data.Utilities["0"].percent_utilization1,
-        data.Utilities["0"].percent_utilization2,
-        data.Utilities["0"].percent_utilization3,
-        data.Utilities["0"].percent_utilization4
+        data.Utilities[0].percent_utilization1,
+        data.Utilities[0].percent_utilization2,
+        data.Utilities[0].percent_utilization3,
+        data.Utilities[0].percent_utilization4
       ]
       console.log(utilityPercent);
 
       utilityCapacity=[
-        data.Utilities["0"].capacity1,
-        data.Utilities["0"].capacity2,
-        data.Utilities["0"].capacity3,
-        data.Utilities["0"].capacity4
+        data.Utilities[0].capacity1,
+        data.Utilities[0].capacity2,
+        data.Utilities[0].capacity3,
+        data.Utilities[0].capacity4
       ]
       console.log(utilityCapacity);
 

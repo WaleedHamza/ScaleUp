@@ -9,8 +9,15 @@ $(document).ready(function () {
     layoutMode: 'fitRows'
   });
 
-  $(document).on("submit", "#form", insertZone);
-});
+
+      $(document).on("submit", "#form", insertZone);
+      $('#addDataBtn').on('click', ()=>{
+        insertZone();
+        location.reload();
+        console.log(' i have been clicked', zone)
+      });
+  
+
 
 $('#addDataBtn').on('click', function () {
   insertZone();

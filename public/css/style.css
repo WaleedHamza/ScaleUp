@@ -8,10 +8,6 @@ body {
     background-color: rgb(45 ,45 ,45)
 }
 
-.navLinks:hover{
-    border-bottom: 2px solid white;
-
-}
 
 #intro{
     position: absolute;
@@ -48,6 +44,7 @@ h1{
 #form {
     display: grid;
     padding: 10%;
+    padding-bottom: 0px;
     margin: 0 auto;
     grid-template-columns: 80%;
 }
@@ -65,10 +62,10 @@ h1{
 .grid-item--width2 { width: 50%; }
 
 .card-content{
-height: 400px;
-width: 400px;
-background-color: darkgray;
-color: white;
+height: 550px;
+width: 100%;
+background-color: rgb(45 ,45 ,45);
+box-shadow: 0px 5px 25px darkgrey;
 }
 
 .break {
