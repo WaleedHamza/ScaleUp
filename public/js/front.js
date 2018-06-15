@@ -2,6 +2,7 @@
 $(document).ready(function () {
   //Materialize Select 
   $('select').material_select();
+  $('select').formSelect();
 
   $('.grid').isotope({
     // options
