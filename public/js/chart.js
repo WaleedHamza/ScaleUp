@@ -4,7 +4,8 @@
 // Could be broken into a different js file, maybe app.js
 $(document).ready(function(){
   $.ajax({
-    url: "http://localhost:8080/api/data",
+    url: "'window.location.hostname'+'/api/data'",
+    // url: "http://localhost:8080/api/data",
     method: "GET",
     success: function(data){
       console.log(data);
