@@ -5,6 +5,7 @@
 $(document).ready(function(){
   $.ajax({
     url: "https://scale-up2018.herokuapp.com/api/data",
+    // utl: "http://localhost:8080/api/data",
     method: "GET",
     dataType: 'json',
     success: function(data){
