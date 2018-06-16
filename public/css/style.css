@@ -62,11 +62,13 @@ h1{
 .grid-item--width2 { width: 50%; }
 
 .card-content{
-height: 550px;
+height: 425px;
 width: 100%;
 background-color: rgb(45 ,45 ,45);
 box-shadow: 0px 5px 25px darkgrey;
+color: white;
 }
+
 
 .break {
     width: 100px;
@@ -84,6 +86,7 @@ box-shadow: 0px 5px 25px darkgrey;
   display: grid;
   grid-template-columns: 50% 50%;
 }
+
 
 /* Animate.css */
 /* To change the type of animation for the title, change the rubberBand class on the title on each page to one of the following class names: */
