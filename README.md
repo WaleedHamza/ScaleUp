@@ -1,14 +1,4 @@
 # ScaleUp
-
-# CHECK db PASSWORD in the CONFIG FILE!!! Make sure its your password.
-
-
-This is a temporary place to put info that may otherwise get lost
-Inorder to run the app I had to comment out the following in \ScaleUp\node_modules\express\lib\application.js
-
-
-
-# ScaleUp
 ## UNC Coding BootCamp - Project 2
 
 ![ScaleUp App](https://user-images.githubusercontent.com/33872841/41495498-f30217b0-70f6-11e8-81b8-158d308dee96.png)
