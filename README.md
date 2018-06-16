@@ -9,7 +9,7 @@ This app is called ScaleUp and it was done as part of Project 2 for the February
 This app figures out percent utilization of utilities for a business that measures efficiency of utilities when preparing to use that space for manufacturing of new drugs.  After figuring out percent utilization for each utility, that is then displayed on a chart.
 
 ## How to get started with the app
-The application is online at https://github.com/WaleedHamza/ScaleUp. It is also available online at Heroku at . You will more than likely have to wait a little while after visiting this url before Heroku spins up the virtual machine which hosts the project.
+The application is online at https://github.com/WaleedHamza/ScaleUp. It is also available online at Heroku at https://scale-up20182.herokuapp.com/index.html. You will more than likely have to wait a little while after visiting this url before Heroku spins up the virtual machine which hosts the project.
 
 Please install Git Bash, MySQL, and Node.js if you want to use the app locally. 
 
