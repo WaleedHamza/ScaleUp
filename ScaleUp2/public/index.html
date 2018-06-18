@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-
     <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" crossorigin="anonymous">
+    <!-- <script src="../models/data.js"></script> -->
   <title>ScaleUp</title>
 </head>
-<body>
 
+<body>
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo animated bounceInLeft">ScaleUp</a>
+        <a href="#" class="brand-logo animated rubberBand">ScaleUp</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="navLinks"><a href="index.html">Home</a></li>
           <li class="navLinks"><a href="form.html">Form</a></li>
@@ -36,38 +36,11 @@
     </nav>
   </header>
 
-  <div class="container">
-
-<div id="resultsItems" style="padding: 10%;">
-  <div class="row" class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
-
-    <div class="col s4 offset-s1" class="grid-item">
-      <div class="card horizontal">
-        <div class="card-stacked">
-          <div class="card-content">
-            <canvas id=chartOne height="300" width="300"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col s4 offset-s1" class="grid-item grid-item--width2">
-      <div class="card horizontal">
-        <div class="card-stacked">
-          <div class="card-content">
-            <canvas id=chartTwo height="300" width="300"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <div id="intro">
+    <h1>ScaleUp</h1>
+    <a href="form.html"><button id="getStartedBtn">Get Started</button></a>
   </div>
-</div>
 
-</div>
-
-<script src="./js/chart.js"></script>
-<script src="./js/front.js"></script>
-
+  <script src="./js/front.js"></script>
 </body>
 </html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" crossorigin="anonymous">
+
+
+  <title>ScaleUp/Form</title>
+</head>
+
+<body>
+  
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo animated rubberBand">ScaleUp</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="navLinks"><a href="index.html">Home</a></li>
+          <li class="navLinks"><a href="form.html">Form</a></li>
+          <li class="navLinks"><a href="results.html">Results</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div id="form" class="row">
+    <form class="col s12">
+      <div id="inputField" class="row">
+          <div class="input-field col s12">
+              <select id="building">
+                <option value="" disabled selected>Select One...</option>
+                <option value="building 1" style="color: white">Building 1</option>
+                <option value="building 2" style="color: white">Building 2</option>
+              </select>
+              <label style="color: white"><h5>Select A Building</h5></label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="zone">
+                  <option value="" disabled selected>Select One...</option>
+                  <option value="zone 1">Zone 1</option>
+                  <option value="zone 2">Zone 2</option>
+                  <option value="zone 3">Zone 3</option>
+                </select>
+                <label style="color: white"><h5>Select A Zone</h5></label>
+              </div>
+                      
+
+        <div class="input-field grey darken-1 col offset-s1 s4">
+          <input id="electricCap" type="number" class="validate" style="color: white;">
+          <label for="name" style="color: white;"><h6>ELECTRICITY</h6></label>
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+          <br>
+          <input id="electricUsed" type="number" class="validate" style="color: white;">
+          <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Used</span>
+        </div>
+
+        <div class="input-field grey darken-2 col offset-s1 s4">
+            <input id="waterCap"  type="number" class="validate" style="color: white;">
+            <label for="name" style="color: white;"><h6>WATER</h6></label>
+            <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+            <br>
+            <input id="waterUsed" type="number" class="validate" style="color: white;">
+            <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Used</span>
+          </div>
+
+          <div class="input-field grey darken-3 col offset-s1 s4">
+              <input id="hvacCap" type="number" class="validate" style="color: white;">
+              <label for="name" style="color: white;"><h6>HVAC</h6></label>
+              <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+              <br>
+              <input id="hvacUsed" type="number" class="validate" style="color: white;">
+              <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Used</span>
+            </div>
+
+            <div class="input-field grey darken-4 col offset-s1 s4">
+                <input id="steamCap" type="number" class="validate" style="color: white;">
+                <label for="name" style="color: white;"><h6>STEAM</h6></label>
+                <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Capacity</span>
+                <br>
+                <input id="steamUsed" type="number" class="validate" style="color: white;">
+                <span class="helper-text" data-error="wrong" data-success="right" style="color: white;">Used</span>
+              </div>
+
+
+
+
+    </form>
+    <br>
+    </div>
+    <div class="col s12">
+
+      <ul class="row">
+        <li class="col s6">
+            <button id="addDataBtn" type="submit" class="btn btn-success">Add Zone Data</button>
+        </li>
+        <li class="col s6">
+          <a href="results.html">
+              <button id="resultsBtn" class="btn btn-success">Results</button>
+          </a>
+                
+        </li>
+      </ul>
+            
+
+          
+  
+        </div>
+  </div>
+
+  <footer class="page-footer" style="background-color: rgb(45, 45, 45)">
+    <div class="container">
+      <div class="row">
+        <div class="col l6">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">ScaleUp was created during the summer of 2018 by Jeannie, Waleed, and Tony.</p>
+          <p class="grey-text text-lighten-4">This app exists to create simple organized visuals of pharmaceutical plants allocated resources.</p>
+        </div>
+
+        <div class="col l6 ">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/WaleedHamza/ScaleUp">Github Repo</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/WaleedHamza/ScaleUp">Heroku Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      <div class="container">
+      © 2018 ScaleUp
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/front.js"></script>
+
+
+</body>
+</html>
