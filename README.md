@@ -1,7 +1,7 @@
 # ScaleUp
 ## UNC Coding BootCamp - Project 2
 
-![ScaleUp App](https://user-images.githubusercontent.com/33872841/41495498-f30217b0-70f6-11e8-81b8-158d308dee96.png)
+![ScaleUp](https://user-images.githubusercontent.com/33872841/41560591-824619ce-7315-11e8-81b0-5ca0a9230856.png)
 
 ## Background
 This app is called ScaleUp and it was done as part of Project 2 for the February 2018 UNC Coding Boot Camp.
