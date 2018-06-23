@@ -190,7 +190,10 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
+    
   };
+
+  
 
   // // associates zones to utilities
   // Utilities.belongsTo(zoneModels);
