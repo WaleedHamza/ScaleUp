@@ -16,6 +16,7 @@ body {
     width: 20%;
     height: 20%;
 }
+
 h1{
     position: relative;
     font-family: 'Roboto Mono';
@@ -43,7 +44,6 @@ h1{
 #form {
     display: grid;
     padding: 10%;
-    padding-bottom: 0px;
     margin: 0 auto;
     grid-template-columns: 80%;
 }
@@ -54,20 +54,16 @@ h1{
     box-shadow: -5px 5px 5px black;
 }
 
-
-
 /* Results */
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
 
 .card-content{
-height: 425px;
-width: 100%;
-background-color: rgb(45 ,45 ,45);
-box-shadow: 0px 5px 25px darkgrey;
-color: white;
-}
-
+  height: 550px;
+  width: 100%;
+  background-color: rgb(45 ,45 ,45);
+  box-shadow: 0px 5px 25px darkgrey;
+  }
 
 .break {
     width: 100px;
@@ -85,8 +81,3 @@ color: white;
   display: grid;
   grid-template-columns: 50% 50%;
 }
-
-
-/* Animate.css */
-/* To change the type of animation for the title, change the rubberBand class on the title on each page to one of the following class names: */
-/* bounce, flash, pulse, rubberBand, shake, headShake, swing, tada, wobble, jello, bounceIn, bounceInDown, bounceInLeft, bounceInRight, bounceInUp, bounceOut, bounceOutDown, bounceOutLeft, bounceOutRight, bounceOutUp, fadeIn, fadeInDown, fadeInDownBig, fadeInLeft, fadeInLeftBig, fadeInRight, fadeInRightBig, fadeInUp, fadeInUpBig	fadeOut, fadeOutDown	fadeOutDownBig, fadeOutLeft	fadeOutLeftBig, fadeOutRight, fadeOutRightBig, fadeOutUp, fadeOutUpBig, flipInX, flipInY, flipOutX, flipOutY, lightSpeedIn, lightSpeedOut, rotateIn, rotateInDownLeft, rotateInDownRight, rotateInUpLeft, rotateInUpRight, rotateOut, rotateOutDownLeft, rotateOutDownRight, rotateOutUpLeft, rotateOutUpRight, hinge	jackInTheBox, rollIn, rollOut, zoomIn, zoomInDown, zoomInLeft, zoomInRight, zoomInUp, zoomOut, zoomOutDown, zoomOutLeft, zoomOutRight, zoomOutUp, slideInDown, slideInLeft, slideInRight, 	slideInUp, slideOutDown, slideOutLeft, slideOutRight, slideOutUp */

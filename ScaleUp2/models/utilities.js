@@ -140,7 +140,8 @@ module.exports = function(sequelize, DataTypes) {
         isInt: true,
         notEmpty: true,
       }
-    },
+    }
+    ,
     percent_utilizations4: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -150,11 +151,11 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     }
-
-
   }, {
       timestamps: false
   });
+
+
 
   Utilities.associate = function(models) {
     Utilities.belongsTo(models.Zones, {
@@ -162,8 +163,9 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-    
   };
+
+
 
   return Utilities;
 };

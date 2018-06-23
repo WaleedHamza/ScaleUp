@@ -1,0 +1,28 @@
+{
+  "name": "scaleup",
+  "version": "1.0.0",
+  "description": "This is a temporary place to put info that may otherwise get lost\r Inorder to run the app I had to comment out the following in \\ScaleUp\\node_modules\\express\\lib\\application.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaleedHamza/ScaleUp.git"
+  },
+  "author": "Jeannie, Tony, Waleed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaleedHamza/ScaleUp/issues"
+  },
+  "homepage": "https://github.com/WaleedHamza/ScaleUp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chart.js": "^2.7.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "path": "^0.12.7",
+    "sequelize": "^4.37.10"
+  }
+}
