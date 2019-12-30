@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  }, 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WaleedHamza/ScaleUp.git"
@@ -24,6 +24,6 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "path": "^0.12.7",
-    "sequelize": "^4.37.10"
+    "sequelize": "^4.44.3"
   }
 }
