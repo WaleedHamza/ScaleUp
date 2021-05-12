@@ -19,7 +19,7 @@
   "homepage": "https://github.com/WaleedHamza/ScaleUp#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
